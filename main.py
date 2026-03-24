@@ -36,6 +36,7 @@ def execute_tool(tool_name, tool_args):
 
     return result
 
+## Old chat (use process_query)
 def chat():
     messages = []
 
@@ -103,6 +104,93 @@ def chat():
                     elif block.type == "tool_use":
                         print(f"\n🔧 Tool Call: {block.name} with {block.input}")
         
+def process_query(query):
+    
+    messages = [{'role': 'user', 'content': query}]
+    
+    response = client.messages.create(
+        max_tokens=2024,
+        model="claude-3-haiku-20240307",
+        tools=TOOLS,
+        messages=messages
+    )
+    
+    process_query_flag = True
+    
+    while process_query_flag:
+        
+        assistant_content = []
+        
+        for content in response.content:
+            
+            # Normal text response
+            if content.type == 'text':
+                print(f"\nClaude: {content.text}")
+                assistant_content.append(content)
+                
+                # If onlyuu text -> finish
+                if len(response.content) == 1:
+                    process_query_flag = False
+            
+            # Tool call
+            elif content.type == 'tool_use':
+                
+                assistant_content.append(content)
+                
+                # save assitant decision (important for MCP)
+                messages.append({
+                    'role': 'assistant',
+                    'content': assistant_content
+                })
+                
+                tool_id = content.id
+                tool_args = content.input
+                tool_name = content.name
+                
+                print(f"\n Calling tool {tool_name} with arg {tool_args}")
+                
+                result = execute_tool(tool_name, tool_args)
+                
+                # Send toll result back to Claude
+                messages.append({
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "tool_result",
+                            "tool_use_id": tool_id,
+                            "content": result
+                        }
+                    ]
+                })
+
+                # Call Claude again
+                response = client.messages.create(
+                    max_tokens=2024,
+                    model="claude-3-haiku-20240307",
+                    tools=TOOLS,
+                    messages=messages
+                )
+
+                if len(response.content) == 1 and response.content[0].type == "text":
+                    print(f"\nClaude: {response.content[0].text}")
+                    process_query_flag = False
+
+
+def chat_loop():
+    print("Type your queries or 'quit' to exit.")
+    while True:
+        try:
+            query = input("\nQuery: ").strip()
+            if query.lower() == 'quit':
+                break
+    
+            process_query(query)
+            print("\n")
+        except Exception as e:
+            print(f"\nError: {str(e)}")
+
+c = chat_loop();
+
 #if __name__ == '__main__':
 #    chat()                
-c = chat();
+
