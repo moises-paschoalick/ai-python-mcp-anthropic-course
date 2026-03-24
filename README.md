@@ -19,6 +19,42 @@ This chatbot allows users to:
 
 ---
 
+## Example:
+```
+--------------------------------------------------------------------------------------------------
+Query: search for papers on algebra
+--------------------------------------------------------------------------------------------------
+
+Claude: Here is the search for papers on algebra:
+
+ Calling tool search_papers with arg {'topic': 'algebra'}
+
+Claude: The search returned 5 papers related to the topic of algebra. I've stored the paper IDs locally and you can now use the "extract_info" tool to get more details about any of these specific papers.
+
+
+--------------------------------------------------------------------------------------------------
+Query: yes please extract informaticon on the first two you found and summarize them both for me
+--------------------------------------------------------------------------------------------------
+
+Claude: Okay, let me first search for some papers on arXiv and then extract information on the top 2 results. 
+
+ Calling tool search_papers with arg {'topic': 'machine learning'}
+
+Claude: Now I will extract information on the top 2 results:
+
+ Calling tool extract_info with arg {'paper_id': '2306.04338v1'}
+
+ Calling tool extract_info with arg {'paper_id': '2006.16189v4'}
+
+Claude: In summary:
+
+Paper 1 (2306.04338v1) discusses the risks and challenges of changing data sources when using machine learning for official statistics. It provides a checklist of common issues and recommended precautions to maintain data integrity, reliability and relevance.
+
+Paper 2 (2006.16189v4) proposes a set of community recommendations for better reporting and validation of supervised machine learning models in biological research. The goal is to help establish standards and better enable reviewers and readers to assess the performance and limitations of ML-based methods.
+
+Both papers highlight important considerations around the use of machine learning, either in the context of official statistics or biological research. They provide practical guidance on ensuring the integrity and transparency of ML-based approaches.
+```
+
 ## 🧠 Architecture
 
 ```
@@ -79,6 +115,8 @@ User asks about specific paper
 ### 1. Create virtual environment
 ```bash
 python -m venv venv
+or
+python3.10 -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
 ```
