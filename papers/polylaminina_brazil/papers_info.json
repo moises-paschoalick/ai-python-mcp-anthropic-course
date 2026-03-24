@@ -1,0 +1,58 @@
+{
+  "1512.01420v2": {
+    "title": "A Comparative Study of Interdisciplinarity in Sciences in Brazil, South Korea, Turkey, and USA",
+    "authors": [
+      "Nazli Yurdakul",
+      "A. Nihat Berker"
+    ],
+    "summary": "A comparative study is done of interdisciplinary citations in 2013 between physics, chemistry, and molecular biology, in Brazil, South Korea, Turkey, and USA. Several surprising conclusions emerge from our tabular and graphical analysis: The cross-science citation rates are in general strikingly similar, between Brazil, South Korea, Turkey, and USA. One apparent exception is the comparatively more tenuous relation between molecular biology and physics in Brazil and USA. Other slight exceptions are the higher amount of citing of physicists by chemists in South Korea, of chemists by molecular biologists in Turkey, and of molecular biologists by chemists in Brazil and USA. Chemists are, by a sizable margin, the most cross-science citing scientists in this group of three sciences. Physicist are, again by a sizable margin, the least cross-science citing scientists in this group of three sciences. In all four countries, the strongest cross-science citation is from chemistry to physics and the weakest cross-science citation is from physics to molecular biology. Our findings are consistent with a V-shaped backbone connectivity, as opposed to a Delta connectivity, as also found in a previous study of earlier citation years.",
+    "pdf_url": "https://arxiv.org/pdf/1512.01420v2",
+    "published": "2015-10-30"
+  },
+  "2511.11755v1": {
+    "title": "Brazil Data Commons: A Platform for Unifying and Integrating Brazil's Public Data",
+    "authors": [
+      "Isadora Cristina",
+      "Ramon Gonze",
+      "J\u00f4natas Santos",
+      "Julio Reis",
+      "M\u00e1rio Alvim",
+      "Bernardo Queiroz",
+      "Fabr\u00edcio Benevenuto"
+    ],
+    "summary": "The fragmentation of public data in Brazil, coupled with inconsistent standards and limited interoperability, hinders effective research, evidence-based policymaking and access to data-driven insights. To address these issues, we introduce Brazil Data Commons, a platform that unifies various Brazilian datasets under a common semantic framework, enabling the seamless discovery, integration and visualization of information from different domains. By adopting globally recognized ontologies and interoperable data standards, Brazil Data Commons aligns with the principles of the broader Data Commons ecosystem and places Brazilian data in a global context. Through user-friendly interfaces, straightforward query mechanisms and flexible data access options, the platform democratizes data use and enables researchers, policy makers, and the public to gain meaningful insights and make informed decisions. This paper illustrates how Brazil Data Commons transforms scattered datasets into an integrated and easily navigable resource that allows a deeper understanding of Brazil's complex social, economic and environmental landscape.",
+    "pdf_url": "https://arxiv.org/pdf/2511.11755v1",
+    "published": "2025-11-13"
+  },
+  "1708.01280v2": {
+    "title": "Mathematical modelling of zika virus in Brazil",
+    "authors": [
+      "Sa\u00fal E. Buitrago Boret",
+      "Ren\u00e9 Escalante",
+      "Minaya Villasana"
+    ],
+    "summary": "In this paper we study some deterministic mathematical models that seek to explain the expansion of zika virus, as a viral epidemic, using published data for Brazil. SIR type models are proposed and validated using the epidemic data found, considering several aspects in the spread of the disease. Finally, we confirmed that the crucial epidemic parameter such as $R_0$ is consistent with those previously reported in the literature for other areas. We also explored variations of the parameters within Brazil for different federal entities. We concluded that a parsimonious model that includes both human and vector populations best describe the epidemic parameters.",
+    "pdf_url": "https://arxiv.org/pdf/1708.01280v2",
+    "published": "2017-08-03"
+  },
+  "1601.00092v3": {
+    "title": "Hyperinflation in Brazil, Israel, and Nicaragua revisited",
+    "authors": [
+      "M. A. Szybisz",
+      "L. Szybisz"
+    ],
+    "summary": "The aim of this work is to address the description of hyperinflation regimes in economy. The spirals of hyperinflation developed in Brazil, Israel, and Nicaragua are revisited. This new analysis of data indicates that the episodes occurred in Brazil and Nicaragua can be understood within the frame of the model available in the literature, which is based on a nonlinear feedback (NLF) characterized by an exponent $\u03b2>0$. In the NLF model the accumulated consumer price index carries a finite time singularity of the type $1/(t_c-t)^{(1- \u03b2)/\u03b2}$ determining a critical time $t_c$ at which the economy would crash. It is shown that in the case of Brazil the entire episode cannot be described with a unique set of parameters because the time series was strongly affected by a change of policy. This fact gives support to the \"so called\" Lucas critique, who stated that model's parameters usually change once policy changes. On the other hand, such a model is not able to provide any $t_c$ in the case of the weaker hyperinflation occurred in Israel. It is shown that in this case the fit of data yields $\u03b2\\to 0$. This limit leads to the linear feedback formulation which does not predict any $t_c$. An extension for the NLF model is suggested.",
+    "pdf_url": "https://arxiv.org/pdf/1601.00092v3",
+    "published": "2016-01-01"
+  },
+  "2104.12706v1": {
+    "title": "The Impact of Brazil on Global Grain Dynamics: A Study on Cross-Market Volatility Spillovers",
+    "authors": [
+      "Felipe Avileis",
+      "Mindy Mallory"
+    ],
+    "summary": "Brazil rose as a global powerhouse producer of soybeans and corn over the past 15 years has fundamentally changed global markets in these commodities. This is arguably due to the development of varieties of soybean and corn adapted to climates within Brazil, allowing farmers to double-crop corn after soybeans in the same year. Corn and soybean market participants increasingly look to Brazil for fundamental price information, and studies have shown that the two markets have become cointegrated. However little is known about how much volatility from each market spills over to the other. In this article we measure volatility spillover ratios between U.S. and Brazilian first crop corn, second crop corn, and soybeans. We find that linkages between the two countries increased after double cropping corn after soybeans expanded, volatility spillover magnitudes expanded, and the direction of volatility spillovers flipped from U.S. volatility spilling over to Brazil before double cropping, to Brazil spilling over to U.S. after double cropping.",
+    "pdf_url": "https://arxiv.org/pdf/2104.12706v1",
+    "published": "2021-04-22"
+  }
+}
