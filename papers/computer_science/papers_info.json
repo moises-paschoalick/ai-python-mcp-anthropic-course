@@ -1,0 +1,53 @@
+{
+  "1211.0310v1": {
+    "title": "Large Synoptic Survey Telescope: Dark Energy Science Collaboration",
+    "authors": [
+      "LSST Dark Energy Science Collaboration"
+    ],
+    "summary": "This white paper describes the LSST Dark Energy Science Collaboration (DESC), whose goal is the study of dark energy and related topics in fundamental physics with data from the Large Synoptic Survey Telescope (LSST). It provides an overview of dark energy science and describes the current and anticipated state of the field. It makes the case for the DESC by laying out a robust analytical framework for dark energy science that has been defined by its members and the comprehensive three-year work plan they have developed for implementing that framework. The analysis working groups cover five key probes of dark energy: weak lensing, large scale structure, galaxy clusters, Type Ia supernovae, and strong lensing. The computing working groups span cosmological simulations, galaxy catalogs, photon simulations and a systematic software and computational framework for LSST dark energy data analysis. The technical working groups make the connection between dark energy science and the LSST system. The working groups have close linkages, especially through the use of the photon simulations to study the impact of instrument design and survey strategy on analysis methodology and cosmological parameter estimation. The white paper describes several high priority tasks identified by each of the 16 working groups. Over the next three years these tasks will help prepare for LSST analysis, make synergistic connections with ongoing cosmological surveys and provide the dark energy community with state of the art analysis tools. Members of the community are invited to join the LSST DESC, according to the membership policies described in the white paper. Applications to sign up for associate membership may be made by submitting the Web form at http://www.slac.stanford.edu/exp/lsst/desc/signup.html with a short statement of the work they wish to pursue that is relevant to the LSST DESC.",
+    "pdf_url": "https://arxiv.org/pdf/1211.0310v1",
+    "published": "2012-11-01"
+  },
+  "2512.16152v1": {
+    "title": "Pulsar Science with the SKA Observatory",
+    "authors": [
+      "Bhal Chandra Joshi",
+      "Aris Karastergiou",
+      "Marta Burgay",
+      "The SKA pulsar science working group"
+    ],
+    "summary": "The large instantaneous sensitivity, a wide frequency coverage and flexible observation modes with large number of beams in the sky are the main features of the SKA observatory's two telescopes, the SKA-Low and the SKA-Mid, which are located on two different continents. Owing to these capabilities, the SKAO telescopes are going to be a game-changer for radio astronomy in general and pulsar astronomy in particular. The eleven articles in this special issue on pulsar science with the SKA Observatory describe its impact on different areas of pulsar science. In this lead article, a brief description of the two telescopes highlighting the relevant features for pulsar science is presented followed by an overview of each accompanying article, exploring the inter-relationship between different pulsar science use cases.",
+    "pdf_url": "https://arxiv.org/pdf/2512.16152v1",
+    "published": "2025-12-18"
+  },
+  "1002.2191v1": {
+    "title": "Vision Based Game Development Using Human Computer Interaction",
+    "authors": [
+      "S. Sumathi",
+      "S. K. Srivatsa",
+      "M. Uma Maheswari"
+    ],
+    "summary": "A Human Computer Interface (HCI) System for playing games is designed here for more natural communication with the machines. The system presented here is a vision-based system for detection of long voluntary eye blinks and interpretation of blink patterns for communication between man and machine. This system replaces the mouse with the human face as a new way to interact with the computer. Facial features (nose tip and eyes) are detected and tracked in realtime to use their actions as mouse events. The coordinates and movement of the nose tip in the live video feed are translated to become the coordinates and movement of the mouse pointer on the application. The left or right eye blinks fire left or right mouse click events. The system works with inexpensive USB cameras and runs at a frame rate of 30 frames per second.",
+    "pdf_url": "https://arxiv.org/pdf/1002.2191v1",
+    "published": "2010-02-10"
+  },
+  "math/9902151v5": {
+    "title": "Homotopy invariants of higher dimensional categories and concurrency in computer science",
+    "authors": [
+      "Philippe Gaucher"
+    ],
+    "summary": "The strict globular $\u03c9$-categories formalize the execution paths of a parallel automaton and the homotopies between them. One associates to such (and any) $\u03c9$-category $\\C$ three homology theories. The first one is called the globular homology. It contains the oriented loops of $\\C$. The two other ones are called the negative (resp. positive) corner homology. They contain in a certain manner the branching areas of execution paths or negative corners (resp. the merging areas of execution paths or positive corners) of $\\C$. Two natural linear maps called the negative (resp. the positive) Hurewicz morphism from the globular homology to the negative (resp. positive) corner homology are constructed. We explain the reason why these constructions allow to reinterprete some geometric problems coming from computer science.",
+    "pdf_url": "https://arxiv.org/pdf/math/9902151v5",
+    "published": "1999-02-26"
+  },
+  "1003.1455v1": {
+    "title": "A Computational Algorithm based on Empirical Analysis, that Composes Sanskrit Poetry",
+    "authors": [
+      "Rama N.",
+      "Meenakshi Lakshmanan"
+    ],
+    "summary": "Poetry-writing in Sanskrit is riddled with problems for even those who know the language well. This is so because the rules that govern Sanskrit prosody are numerous and stringent. We propose a computational algorithm that converts prose given as E-text into poetry in accordance with the metrical rules of Sanskrit prosody, simultaneously taking care to ensure that sandhi or euphonic conjunction, which is compulsory in verse, is handled. The algorithm is considerably speeded up by a novel method of reducing the target search database. The algorithm further gives suggestions to the poet in case what he/she has given as the input prose is impossible to fit into any allowed metrical format. There is also an interactive component of the algorithm by which the algorithm interacts with the poet to resolve ambiguities. In addition, this unique work, which provides a solution to a problem that has never been addressed before, provides a simple yet effective speech recognition interface that would help the visually impaired dictate words in E-text, which is in turn versified by our Poetry Composer Engine.",
+    "pdf_url": "https://arxiv.org/pdf/1003.1455v1",
+    "published": "2010-03-07"
+  }
+}
