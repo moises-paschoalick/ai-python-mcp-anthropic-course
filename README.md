@@ -137,3 +137,29 @@ type exit to end the program.
 ```
 python main.py
 ```
+
+
+
+## Run MCP Inspector
+```
+npx @modelcontextprotocol/inspector python main.py
+```
+
+Transport Type
+- STDIO
+- Command: 
+```
+uv
+``` 
+- Arguments
+```
+run research_server.py
+```
+or  (python in command and research_server.py in arguments)
+```
+python 
+research_server.py
+```
+using uv to manager the virtual environment of the project. Us is the modern choice and quickly becoming the new standard in the Python ecosystem.
+
+
