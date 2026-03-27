@@ -83,6 +83,21 @@ User asks about specific paper
    Claude explains result
 
 ```
+### After with MCP Server and MCP Client
+All this example before is wrapped in MCP Server. After that create a MCP Client to separate logical interface and comunicate to MCP Server.
+
+The client must fetch tool definitions dynamically
+```
+Claude → tool_use
+        ↓
+MCP Client
+        ↓
+MCP Server (stdio)
+        ↓
+Python function (remote)
+
+
+```
 
 ---
 
