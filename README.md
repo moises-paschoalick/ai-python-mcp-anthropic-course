@@ -177,4 +177,85 @@ research_server.py
 ```
 using uv to manager the virtual environment of the project. Us is the modern choice and quickly becoming the new standard in the Python ecosystem.
 
+## Understanding mcp_chatbot.py class MCP_ChatBot
+```
+
+     +------------------------------------------------------------+
+     | MCP_ChatBot                                                |
+     +------------------------------------------------------------+
+ (1) | - session: List[ClientSession]                             |
+     | - antropic: Anthropic                                      |
+ (2) | - available_tools: List[ToolDefinition]                    |
+ (3) | - tool_to_session: Dict[str, clientSession]                |
+ (4) | - exit_stack: AsyncExitStack                               |
+     +------------------------------------------------------------+
+     | + int()                                                    |
+     | + process_query(query: str)                                |
+     | + chat_loop()                                              |
+ (5) | + connect_to_server()                                      |
+     | + connect_to_server(server_name: str, server_config: dict) |
+ (6) | + cleanup()                                                |
+     +------------------------------------------------------------+
+
+```
+```
+class ToolDefinition(TypedDict):
+    name: str
+    description: str
+    input_schemma: dict
+``` 
+
+1. Instead of having one session, you now have a list of client sessions where each client session establishes a 1-to-1 connection to each server;
+2. available_tools includes the definitions of all the tools exposed by all servers that the chatbot can connect to.
+3. tool_to_session maps the tool name to the corresponding client session; in this way, when the LLM decides on a particular tool name, you can map it to the correct client session so you can use that session to send tool_call request to the right MCP server.
+4. exit_stack is a context manager that will manage the mcp client objects and their sessions and ensures that they are properly closed. The exit_stack allows you to dynamically add the mcp clients and their sessions as you'll see in th
+5. connect_to_servers reads the server configuration file and for each single server, it calls the helper method connect_to_server. In this latter method, an MCP client is created and used to launch the server as a sub-process and then a client session is created to connect to the server and get a description of the list of the tools provided by the server.
+6. cleanup is a helper method that ensures all your connections are properly shut down when you're done with them. For all the resources you've added to your exit_stack; it closes (your MCP clients and sessions) in the reverse order they were added - like stacking and unstacking plates. This is particularly important in network programming to avoid resource leaks.
+
+
+## Connecting multiple MCP servers
+
+```
+{
+    "mcpServers": {
+        
+        "filesystem": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-filesystem",
+                "."
+            ]
+        },
+        "research": {
+            "command": "python",
+            "args": ["research_server.py"]
+        }                
+        ,
+        "fetch": {
+            "command": "uvx",
+            "args": ["mcp-server-fetch"]
+        }
+    }
+}
+
+```
+# Example write a file
+```
+- Secure MCP Filesystem Server running on stdio - ok
+- Client does not support MCP Roots, using allowed directories set from server args: [ '/home/moises/Desktop/DEV/python/ai-python-mcp-anthropic-course' ]
+
+Connected to filesystem with tools: ['read_file', 'read_text_file', 'read_media_file', 'read_multiple_files', 'write_file', 'edit_file', 'create_directory', 'list_directory', 'list_directory_with_sizes', 'directory_tree', 'move_file', 'search_files', 'get_file_info', 'list_allowed_directories']
+Processing request of type ListToolsRequest
+
+Connected to research with tools: ['search_papers', 'extract_info']
+```
+
+Prompt: write a file mom.txt with I love you
+
+![example](assets/01.png)
+
+Simple fetch example:
+Prompt: fetch https://api.github.com/users/torvalds and summarize the response
+
 
